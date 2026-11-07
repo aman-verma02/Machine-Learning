@@ -19,7 +19,7 @@ The model is trained on the **entire dataset at once**, then deployed. It doesn'
 
 ## Online Learning
 
-The model is trained **incrementally**, learning from data as it arrives — one instance or small mini-batch at a time.
+The model is trained **incrementally**, learning from data as it arrives - one instance or small mini-batch at a time.
 
 **How it works:**
 - Feed data sequentially (a stream)
@@ -78,7 +78,15 @@ Even if data doesn't drift, if you can't afford the compute for full retraining,
 
 **When NOT to use it:** if your data is stable, fits in memory, and doesn't change much — batch learning is simpler, more stable, and easier to control/debug. Online learning also carries more risk since bad data can corrupt the model live.
 
+### Disadvantage
+1. Tricky to use 
+2. Risky
+
+
+if model learned something unexpected it should roll back to the previous model 
 ## Concept Drift
+
+where data drifts or concepts drift usually 
 
 Concept drift means **the statistical properties of the target variable (what you're trying to predict) change over time**, so a relationship the model learned in the past no longer holds.
 
